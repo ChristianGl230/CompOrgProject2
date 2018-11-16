@@ -5,4 +5,14 @@
     userInput:		.space 50
 .text
     main:
-	li $v0, 8 
+	li $v0, 8
+	la $a0, userInput
+	li $a1, 50
+	syscall
+	
+	removeLeading:  #Remove leading spaces
+	li $t8, 32      
+	lb $t9, 0($a0)
+	beq $t8, $t9, removeFirst
+	move $t9, $a0
+	j checkLength

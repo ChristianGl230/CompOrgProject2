@@ -16,4 +16,6 @@
 	beq $t8, $t9, removeFirst
 	move $t9, $a0
 	j checkLength
-	checkLength: 
+	
+	checkLength:
+	addi $t0, $t0, 0 

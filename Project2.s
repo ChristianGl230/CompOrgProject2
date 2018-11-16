@@ -32,4 +32,5 @@
 
 	done:
 	beqz $t0, nullError
+	slti $t3, $t0, 5
 	

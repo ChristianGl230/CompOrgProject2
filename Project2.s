@@ -51,4 +51,5 @@
 
 	checkString:
 	lb $t5, 0($a0)
+	beqz $t5, conversionInitializations
 	

@@ -98,3 +98,12 @@
 	slti $t6, $s4, 121
 	bne $t6, $zero, aTox
 	
+	zeroToNine:
+	addi $s4, $s4, -48
+	j nextStep
+	AToX:
+	addi $s4, $s4, -55
+	j nextStep
+	aTox:
+	addi $s4, $s4, -87
+	

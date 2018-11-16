@@ -53,4 +53,6 @@
 	lb $t5, 0($a0)
 	beqz $t5, conversionInitializations
 	beq $t5, $t1, conversionInitializations
-	slti $t6, $t5, 48    
+	slti $t6, $t5, 48 
+	bne $t6, $zero, baseError
+	slti $t6, $t5, 58   

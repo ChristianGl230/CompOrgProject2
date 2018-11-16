@@ -34,4 +34,21 @@
 	beqz $t0, nullError
 	slti $t3, $t0, 5
 	beqz $t3, lengthError
+	move $a0, $t4
+	j checkString
+
+	nullError:
+	li $v0, 4
+	la $a0, nullErrorMessage
+	syscall
+	j exit
+	
+	lengthError:
+	li $v0, 4
+	la $a0, lengthErrorMessage
+	syscall
+	j exit
+
+	checkString:
+	lb $t5, 0($a0)
 	

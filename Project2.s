@@ -62,3 +62,6 @@
 	slti $t6, $t5, 89 
 	bne $t6, $zero, Increment
 	slti $t6, $t5, 97 
+	bne $t6, $zero, baseError
+	slti $t6, $t5, 121 
+	

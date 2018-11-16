@@ -77,5 +77,7 @@
 	syscall
 	j exit
 	
+	conversionInitializations:
+	move $a0, $t4
 	
 	

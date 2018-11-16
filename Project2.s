@@ -27,4 +27,9 @@
 	beqz $t2, done
 	beq $t2, $t1, done
 	addi $a0, $a0, 1
+	addi $t0, $t0, 1
+	j lengthLoop
+
+	done:
+	beqz $t0, nullError
 	

@@ -79,5 +79,6 @@
 	
 	conversionInitializations:
 	move $a0, $t4
+	addi $t7, $t7, 0 
 	
 	

@@ -146,3 +146,9 @@
 	mflo $s7
 	add $t7, $t7, $s7
 	
+	displaySum:
+	li $v0, 1
+	move $a0, $t7
+	syscall
+	
+	

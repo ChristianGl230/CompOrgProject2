@@ -1,16 +1,16 @@
 .data
-    nullErrorMessage:	.asciiz "Input is empty."
+    emptyErrorMessage:	.asciiz "Input is empty."
     lengthErrorMessage: .asciiz "Input is too long."
     baseErrorMessage:   .asciiz "Invalid base-34 number."
-    userInput:		.space 50
+    userInput:		.space 60
 .text
     main:
 	li $v0, 8
 	la $a0, userInput
-	li $a1, 50
+	li $a1, 60
 	syscall
 	
-	removeLeading:
+	removeLeadingSpace:
 	li $t8, 32      
 	lb $t9, 0($a0)
 	beq $t8, $t9, removeFirst
@@ -37,9 +37,9 @@
 	move $a0, $t4
 	j checkString
 
-	nullError:
+	emptyError:
 	li $v0, 4
-	la $a0, nullErrorMessage
+	la $a0, emptyErrorMessage
 	syscall
 	j exit
 	
